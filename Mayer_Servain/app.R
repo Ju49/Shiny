@@ -7,17 +7,18 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shiny)
+library(shiny) #il faut charger le package au début de chacun des scripts
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Old Faithful Geyser Data"),
+    titlePanel("Données truc"),
 
     # Sidebar with a slider input for number of bins 
+    
     sidebarLayout(
-        sidebarPanel(
+        sidebarPanel(# cette partie va contenir tous les éléments de contrôle de l'UI
             sliderInput("bins",
                         "Number of bins:",
                         min = 1,
@@ -26,7 +27,7 @@ ui <- fluidPage(
         ),
 
         # Show a plot of the generated distribution
-        mainPanel(
+        mainPanel(# cette partie va contenir les sorties
            plotOutput("distPlot")
         )
     )
